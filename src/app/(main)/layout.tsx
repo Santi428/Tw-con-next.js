@@ -1,24 +1,18 @@
+import ExploreTrending from "@/components/explore/ExploreTrending"
+import Menu from "@/components/menu/Menu"
 import Link from "next/link"
 import { FC, PropsWithChildren } from "react"
 
 
 const layout: FC<PropsWithChildren>  = ({children}) => {
   return <>
-        <header className="flex justify-between mb-4 px-8 py-4 bg-gray-500">
-          <div>
-            logo
+        <div className="w-full h-full grid grid-cols-12">
+          <div className="col-span-3">
+            <Menu />
           </div>
-          <div className="flex ">
-            <div>
-              <Link href='/users'>Usuarios</Link>
-            </div>
-            <div className="ml-4">
-              <Link href='/users/messages'>Mensajes</Link>
-            </div>
-          </div>
-        </header>
-        <main>{children}</main>
-        <footer>Footer</footer>
+          <main className="col-span-6">{children}</main>
+          <footer className="col-span-3"><ExploreTrending hashes={[]} /></footer>
+        </div>
     </>
   
 }

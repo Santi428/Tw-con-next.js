@@ -1,4 +1,5 @@
 import Message from "@/components/messages/Message"
+import UsersTabs from "@/components/users/UsersTabs"
 import Link from "next/link"
 
 const page = ({params}: {params: {username: String}}) => {
@@ -34,8 +35,25 @@ const page = ({params}: {params: {username: String}}) => {
     ],
     replies: [
       {
-        message: 'Mi respuesta',
-        repliesCount: 0
+        initialLetters: "JD",
+        username: "@johnDoe",
+        name: "John Doe",
+        message: "Loved your recent post! It really resonated with me.",
+        replieFrom: "@you"
+      },
+      {
+        initialLetters: "AL",
+        username: "@annaLee",
+        name: "Anna Lee",
+        message: "Great content as always. Keep it up!",
+        replieFrom: "@you"
+      },
+      {
+        initialLetters: "RS",
+        username: "@ryanSmith",
+        name: "Ryan Smith",
+        message: "I think your points are very insightful. Looking forward to more!",
+        replieFrom: "@you"
       }
     ]
   }
@@ -60,13 +78,7 @@ const page = ({params}: {params: {username: String}}) => {
           <div><span className="font-semibold">{user.followingCount} Siguiendo</span></div>
         </div>
       </section>
-      <div className="flex justify-evenly mb-4">
-        <div className="cursor-pointer border-b-2 border-blue4">Mensajes</div>
-        <div className="cursor-pointer">Respuestas</div>
-      </div>
-      <div>
-        {user.messages.map((i, index) => <Message key={index} message={i}/>)} 
-      </div>
+      <UsersTabs messages={user.messages} replies={user.replies}/>
 
   
     </main>
