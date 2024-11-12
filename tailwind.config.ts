@@ -1,3 +1,4 @@
+import { title } from "process";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -12,6 +13,12 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+
+      fontFamily:{
+        title: ['var(--font-alegreya)'],
+        body: ['var(--font-mulish)']
+      },
+
       fontSize: {
         xs: '14px',
         sm: '16px',

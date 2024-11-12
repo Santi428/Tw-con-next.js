@@ -10,15 +10,17 @@ const ExploreTrending = ({hashes}: ExploreTrendingProps) => {
 
     if(!hashes || hashes.length === 0) return <></>
 
+    
+
 
   return (
     <>
         <div className="bg-gray-200 rounded-lg px-8 py-4" style={{minWidth: 250}}>
             <h2 className="mb-2">Trending</h2>
-            {hashes.map((i, index) => 
+            {hashes.slice(0,2).map((i, index) => 
                 <div key={index} className="mb-4">
                     <Link href='/mensajes?query=Tatooine&type=hash'>
-                        <h4 className="font-semibold cursor-pointer p-1">#{i.hash}</h4>
+                        <h4 className="font-semibold cursor-pointer p-1"># {i.hash}</h4>
                     </Link>
                     <div className="px-1">
                         <PostsCounter count={i.count}/>

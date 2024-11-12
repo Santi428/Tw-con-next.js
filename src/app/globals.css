@@ -4,38 +4,48 @@
 
 
 @layer components {
+
+  h1, h2, h3{
+    @apply font-title
+  }
+
+  body {
+    @apply font-body
+  }
+
   h2{
     @apply font-semibold;
     @apply text-base;
   }
-
+  
   h3 {
     @apply font-semibold;
     @apply text-base;
   }
 
-  /* .button-primary {
-    @apply rounded-lg
-    @apply bg-blue-400
-    @apply text-white
-    @apply px-6
-    @apply py-2
-
+  .button-primary {
+    @apply rounded-lg;
+    @apply bg-blue-400;
+    @apply text-white;
+    @apply px-6;
+    @apply py-2;
   }
+  
   .button-primary:hover {
-    @apply bg-blue-500
-  } */
-
-  /* .link-primary {
-    @apply text-blue-400
-    @apply cursor-pointer
-    @apply font-semibold
+    @apply bg-blue-500;
   }
+  
+  .link-primary {
+    @apply text-blue-400;
+    @apply cursor-pointer;
+    @apply font-semibold;
+  }
+  
   .link-primary:hover {
-    @apply -blue-500
-  }  */
+    @apply text-blue-500;
+  }
 }
-
+  
 html,
 body {
   max-width: 100vw;

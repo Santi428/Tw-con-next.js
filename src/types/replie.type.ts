@@ -1,7 +1,6 @@
+import { UserType } from "./user.types"
+
 export type ReplieType = {
-    initialLetters: string,
-    username: string,
-    name: string,
+    user: UserType
     message: string
-    replieFrom: string
 }

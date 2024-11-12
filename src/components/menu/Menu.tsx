@@ -16,7 +16,7 @@ const Menu = () => {
                 <Link href={''} className="p-2 w-full flex">Perfil</Link>
             </li>
         </ul>
-        <button className="button-primary">Postear</button>
+        <button className="button-primary uppercase font-semibold">Postear</button>
     </nav>
   )
 }

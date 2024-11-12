@@ -1,6 +1,5 @@
 import ExploreTrending from "@/components/explore/ExploreTrending"
 import Menu from "@/components/menu/Menu"
-import Link from "next/link"
 import { FC, PropsWithChildren } from "react"
 
 
@@ -11,7 +10,7 @@ const layout: FC<PropsWithChildren>  = ({children}) => {
             <Menu />
           </div>
           <main className="col-span-6">{children}</main>
-          <footer className="col-span-3"><ExploreTrending hashes={[]} /></footer>
+          <footer className="col-span-3"><ExploreTrending hashes={[{hash: 'Hola HOla', count: 3}, {hash: 'Chau Chau', count: 1}]} /></footer>
         </div>
     </>
   

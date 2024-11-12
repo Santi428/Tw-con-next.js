@@ -9,7 +9,7 @@ const PostsCounter = ({count}: PostCounterProps) => {
 
   return (
     <div>
-        {count}{label}
+        {count} {label}
     </div>
   )
 }
