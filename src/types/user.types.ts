@@ -1,3 +1,11 @@
+export type TrendingUserType = {
+    id:             string;
+    username:       string;
+    name:           string;
+    photoUrl:       string;
+    count:          number
+}
+
 export type UserType = {
     id:             string;
     username:       string;
