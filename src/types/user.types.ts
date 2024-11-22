@@ -1,9 +1,11 @@
+import { PaginationType } from "./pagination.types";
+
 export type TrendingUserType = {
     id:             string;
     username:       string;
     name:           string;
     photoUrl:       string;
-    count:          number
+    followersCount: number
 }
 
 export type UserType = {
@@ -16,4 +18,9 @@ export type UserType = {
     followersCount: number;
     followingCount: number;
     messageCount:   number;
+}
+
+export type TrendingUserRes = {
+    users: TrendingUserType[]
+    pagination: PaginationType
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Alegreya, Mulish } from 'next/font/google'
 import "./globals.css";
+import Navbar from "@/components/layout/Navbar";
 
 
 
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body
         className={`antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

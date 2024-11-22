@@ -6,6 +6,6 @@ export type TrendingHashtag = {
 }
 
 export type TrendingRes = {
-    pag: PaginationType
+    pagination: PaginationType
     content: TrendingHashtag[]
 }

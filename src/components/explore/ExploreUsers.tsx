@@ -17,12 +17,12 @@ const ExploreUsers = ({users}: ExploreUsersProps) => {
     <>
         <div className="bg-gray-200 rounded-lg px-8 py-4" style={{minWidth: 250}}>
             <h2 className="mb-2">A quien seguir</h2>
-            {users.slice(0, 4).map((i, index) => 
+            {users.slice(0, 3).map((i, index) => 
                 <UserCard key={index} user={i} layout={UserCardLayout.VERTICAL}/>
             )}
 
-            {users.length > 4 && 
-            <Link href='/explorar?type=hash'>
+            {users.length > 3 && 
+            <Link href='/explore?type=USERS'>
                 <div className="text-center link-primary">
                     Ver más
                 </div>

@@ -1,10 +1,11 @@
 import { TrendingUserType, UserType } from "@/types/user.types"
+import { UsuariosParaMostrarEnExplorar } from "@/types/userExplore.types"
 import Image from "next/image"
 import Link from "next/link"
 import { PropsWithChildren } from "react"
 
 type UserCardProps = PropsWithChildren & {
-    user: TrendingUserType | UserType
+    user: TrendingUserType | UserType 
     layout: UserCardLayout
 }
 
@@ -27,7 +28,7 @@ const UserCard = ({user, layout, children}: UserCardProps) => {
 
 
   return (
-    <div className="grid grid-cols-12">
+    <div className="grid grid-cols-12 pb-5">
         <div className="w-full h-full mt-2 mb-2 col-span-1 flex items-center justify-center">
             <Link href={`/users/${user.username}`}>
                 <Image
