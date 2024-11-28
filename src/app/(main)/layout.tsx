@@ -25,7 +25,7 @@ const layout: FC<PropsWithChildren> = async ({children}) => {
               <ExploreTrending hashes={hashes.content} />
             </div>
             <ExploreUsers users={users.content}/>          
-            <Link href='/faq/1'>
+            <Link href='/faq'>
               <div className="link-primary mt-12 text-center">
                 Preguntas Frecuentes
               </div>

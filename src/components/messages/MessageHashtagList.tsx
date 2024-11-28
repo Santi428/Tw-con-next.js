@@ -1,10 +1,9 @@
 'use client'
-import { TrendingHashtag, TrendingRes } from "@/types/hash.types"
-import InfiniteScroll from "react-infinite-scroll-component"
-import UserCard, { UserCardLayout } from "../users/UserCard"
 import exploreApi from "@/services/explore/explore.service"
-import { useState } from "react"
+import { TrendingHashtag, TrendingRes } from "@/types/hash.types"
 import { PaginationType } from "@/types/pagination.types"
+import { useState } from "react"
+import InfiniteScroll from "react-infinite-scroll-component"
 import MessageHashtag from "./MessageHashtag"
 
 type MessageHashtagListProps = {

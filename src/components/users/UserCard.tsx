@@ -51,8 +51,8 @@ const UserCard = ({user, layout, children}: UserCardProps) => {
                         @{user.name}
                     </div>
                 </div>
-                {children}
             </Link>
+            {children}
         </div>
     </div>
   )

@@ -1,7 +1,7 @@
+'use client'
 import { MessageType } from "@/types/message.types";
-import Link from "next/link";
-import Image from 'next/image'
-import profilePic from '../../../public/profilepic.png'
+import { useRouter } from "next/navigation";
+import RepliesCounter from "../counters/RepliesCounter";
 import UserCard, { UserCardLayout } from "../users/UserCard";
 
 
@@ -11,7 +11,16 @@ type MessageProps = {
 
 const Message = ({message}: MessageProps) => {
 
-    return <UserCard user={message.user} layout={UserCardLayout.HORIZONTAL}><p>{message.message}</p></UserCard>
+    const router = useRouter()
+
+    return <UserCard user={message.user} layout={UserCardLayout.HORIZONTAL}>
+            <div className="flex flex-col">
+                <p>{message.message}</p>
+                <div className="flex justify-end pt-2">
+                    <RepliesCounter count={message.repliesCount} onclick={() => router.push(`/users/messages/${message.id}`)}/>
+                </div>
+            </div>
+        </UserCard>
 }
 
 export default Message
