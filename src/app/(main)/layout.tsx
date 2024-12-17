@@ -1,6 +1,7 @@
 import ExploreTrending from "@/components/explore/ExploreTrending"
 import ExploreUsers from "@/components/explore/ExploreUsers"
 import Menu from "@/components/menu/Menu"
+import SearchBar from "@/components/search/SearchBar"
 import exploreApi from "@/services/explore/explore.service"
 import Link from "next/link"
 import { FC, PropsWithChildren } from "react"
@@ -21,6 +22,9 @@ const layout: FC<PropsWithChildren> = async ({children}) => {
           </div>
           <main className="col-span-6">{children}</main>
           <footer className="col-span-4">
+            <div className="mb-4">
+              <SearchBar />
+            </div>
             <div className="mb-4">
               <ExploreTrending hashes={hashes.content} />
             </div>

@@ -1,5 +1,4 @@
 import MessageFeed from "@/components/messages/MessageFeed"
-import MessagePostForm from "@/components/messages/MessagePostForm"
 import MessagePostSinHook from "@/components/messages/MessagePostSinHook"
 import messageApi from "@/services/messages/messages.service"
 

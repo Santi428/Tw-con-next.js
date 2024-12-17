@@ -13,7 +13,7 @@ const Menu = () => {
                 <Link href={'/explore'} className="p-2 w-full flex">Explorar</Link>
             </li>
             <li className="text-2xl w-full hover:bg-blue-400 hover:text-white">
-                <Link href={''} className="p-2 w-full flex">Perfil</Link>
+                <Link href={'/profile'} className="p-2 w-full flex">Perfil</Link>
             </li>
         </ul>
         <button className="button-primary uppercase font-semibold">Postear</button>

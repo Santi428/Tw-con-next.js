@@ -10,6 +10,9 @@ class MessageApi {
     getMessageReplies = async (id: string, page: number, size: number): Promise<PageType<MessageType>> => 
         httpGet(`/public/messages/${id}/replies`, new URLSearchParams({page: `${page}`, size: `${size}`}))
 
+    getMessageByHash = async (hash: string): Promise<PageType<MessageType>> => 
+        httpGet(`/public/messages/hash/${hash}`)
+
 
     getMessage = async (id: string): Promise<MessageType> => 
         httpGet(`/public/messages/${id}`)

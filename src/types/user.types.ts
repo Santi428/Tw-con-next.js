@@ -20,6 +20,14 @@ export type UserType = {
     messageCount:   number;
 }
 
+export type RegisterResponseUserType = {
+    id:             string;
+    username:       string;
+    name:           string;
+    photoUrl:       string;
+    createdAt:      string;
+}
+
 export type TrendingUserRes = {
     users: TrendingUserType[]
     pagination: PaginationType

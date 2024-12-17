@@ -34,6 +34,18 @@
   .button-primary:hover {
     @apply bg-blue-500;
   }
+
+  .button-secondary {
+    @apply rounded-lg;
+    @apply bg-white;
+    @apply text-blue-400;
+    @apply px-6;
+    @apply py-2;
+  }
+  
+  .button-secondary:hover {
+    @apply bg-gray-500;
+  }
   
   .link-primary {
     @apply text-blue-400;
